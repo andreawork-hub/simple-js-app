@@ -1,20 +1,37 @@
-let pokemonList=[
+let pokemonRepository = (function () {
+
+let pokemonList = [
     {
-        name:"Butterfree",
-        height:"1.1",
-        type:['bug','flying']
+        name: "Butterfree",
+        height: "1.1",
+        type: ['bug', 'flying']
     },
     {
-        name:"Meowth",
-        height:"0.4",
-        type:'normal',
+        name: "Meowth",
+        height: "0.4",
+        type: 'normal',
     },
     {
-        name:"Gothitelle",
-        height:"1.5",
-        type:'psychic',
+        name: "Gothitelle",
+        height: "1.5",
+        type: 'psychic',
     },
-] ; 
+]; 
+
+function getAll () {
+    return pokemonList ;
+}
+
+function add (item) {
+    pokemonList.push(item) ; 
+}
+
+return {
+    getAll: getAll , 
+    add: add
+} 
+}) () ;
+let pokemonList = pokemonRepository.getAll()
 
 // created a for loop that iterates over each item in pokemonList
 // added a conditional to check if the height is above a certain value, with note “Wow, that’s big!”
