@@ -22,13 +22,31 @@ function getAll () {
     return pokemonList ;
 }
 
+function addListItem (item){
+    let pokemonList = document.querySelector(".pokemon-list") ; 
+    let listItem = document.createElement("li"); 
+    let button = document.createElement ("button"); 
+    button.addEventListener ("click" , function(showDetails){
+        console.log(showDetails);
+    }) ;  /* could work? button.addEventListner ("click", (item => console.log(item))) ; */
+    button.innerText = item.name ; 
+    button.classList.add("button-class"); 
+    listItem.appendChild(button);
+    pokemonList.appendChild(listItem) ; 
+}
+
 function add (item) {
     pokemonList.push(item) ; 
 }
 
+function showDetails(item){
+    console.log(item) ;
+}
+
 return {
     getAll: getAll , 
-    add: add
+    add: add , 
+    addListItem: addListItem 
 } 
 }) () ;
 let pokemonList = pokemonRepository.getAll()
@@ -51,4 +69,7 @@ let pokemonList = pokemonRepository.getAll()
 // function iterates over each item in pokemonList, prints the details of each item 
 // arrow function 
 
-pokemonList.forEach (pokemonList => console.log (pokemonList)) ; 
+pokemonList.forEach (pokemonList => console.log (pokemonList)) ;
+pokemonRepository.getAll().forEach(function(item){
+    pokemonRepository.addListItem(item) ; 
+}) ;  
