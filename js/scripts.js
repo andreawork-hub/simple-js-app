@@ -48,7 +48,7 @@ let pokemonRepository = (function () {
         let pokemonList = $(".pokemon-list") ;
             let listpokemon = $('<li class="list-group-item"></li>');
             let liCard = $ ('<div class="card align-items-center" style="width:250px"></div>') ; 
-            let button = $('<button type="button" class="btn btn-dark" data-toggle="modal" data-target="#pokemonModal">Details </button>');
+            let button = $('<button type="button" class="pokemon-button btn btn-dark" data-toggle="modal" data-target="#pokemonModal">Details </button>');
             button.on("click", function(e){
             showDetails(pokemon)
             }); 
