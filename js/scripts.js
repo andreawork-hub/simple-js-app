@@ -46,14 +46,14 @@ let pokemonRepository = (function () {
     function addListItem(pokemon){
         pokemonRepository.loadDetails(pokemon).then(function(){
         let pokemonList = $(".pokemon-list") ;
-            let listpokemon = $('<li class="list-group-item"></li>');
-            let liCard = $ ('<div class="card align-items-center" style="width:250px"></div>') ; 
-            let button = $('<button type="button" class="pokemon-button btn btn-dark" data-toggle="modal" data-target="#pokemonModal">Details </button>');
+            let listpokemon = $('<li class="list-group-item" style="border: none"></li>');
+            let liCard = $ ('<div class="card align-items-center justify-content-center bg-dark" style="width:250px ; border: 1px solid red ; border-radius:100% ; height:250px"></div>') ; 
+            let button = $('<button type="button" class="pokemon-button btn btn-danger" data-toggle="modal" data-target="#pokemonModal">Details </button>');
             button.on("click", function(e){
             showDetails(pokemon)
             }); 
-            let liTitle = $('<h5 class="li-title; text-uppercase">' + pokemon.name + '</h5>').attr('style', 'text-align: center');
-            let liImage = $ ('<img class="card-image">').attr('src' , pokemon.imageUrlFront );
+            let liTitle = $('<h5 class="li-title; text-uppercase">' + pokemon.name + '</h5>').attr('style', 'text-align: center ; color:white');
+            let liImage = $ ('<img class="card-image" style="width:50%">').attr('src' , pokemon.imageUrlFront );
         
             liCard.append(liImage);
             liCard.append(liTitle); 
