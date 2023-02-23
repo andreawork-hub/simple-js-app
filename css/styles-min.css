@@ -1,1 +1,0 @@
-:root{--primary:red;--textlight:white}body{font-family:Arial,Helvetica,sans-serif;}.col{display:flex;flex-direction:wrap;flex-flow:column;border:5px solid var(--primary);gap:20px}.row{padding:20px;justify-content:center;gap:20px}.modal-content{color:var(--textlight);}
