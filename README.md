@@ -19,9 +19,10 @@ Tech Stack
 - JavaScript 
 
 Key Features
-- Load data from an external source (API)
-- View a list of items/Pokemons
-- On user action (e.g., by clicking on a Pokemon), view details in modal (UI component)
+- Load data from an external source (API).
+- View a list of items/Pokemons.
+- On user action (e.g., by clicking on an item/Pokemon), view details in modal (UI component).
+- Search for an item/Pokemon.
 
 🚀 Live Demo
 ---
@@ -31,7 +32,7 @@ https://andreawork-hub.github.io/simple-js-app/
 ----
 - Add script, polyfills and bootstrap to the html file.
 - To see the changes made to files in real time use CodePen. 
-- You can deploy this project using: GitHub Pages
+- You can deploy this project using: GitHub Pages.
 
 👥 Authors
 -----
